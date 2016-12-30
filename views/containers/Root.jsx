@@ -5,7 +5,7 @@ import Agenda from '../containers/Agenda';
 const Root = ({ store }) => {
   return (
     <Provider store={store}>
-      <Agenda />
+      <Agenda title={"Calendar"}/>
     </Provider>
   );
 };

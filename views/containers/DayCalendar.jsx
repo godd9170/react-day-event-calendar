@@ -11,6 +11,8 @@ class DayCalendar extends React.Component {
     return this.props.events.map((event, key) => {
       return (
         <Event
+          title={event.title}
+          location={event.location}
           start={event.start}
           end={event.end}
           widthDivisor={event.widthDivisor}

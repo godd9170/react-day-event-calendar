@@ -29,7 +29,7 @@ const Divisors = ({ totalMinutes, totalMinutesPerDivisor }) => {
     times.push(
       (
         <div key={i} style={positionStyle} className="calendar__divisor__time" >
-          { moment().set('hour', 9).set('minute', i * totalMinutesPerTime).format('hh:mm a')}
+          { moment().set('hour', 0).set('minute', i * totalMinutesPerTime).format('hh:mm a')}
         </div>
       )
     );

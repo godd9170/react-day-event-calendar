@@ -14,12 +14,12 @@ class Agenda extends React.Component {
   render = () => {
     return (
       <div className="agenda">
-        <h1 className="agenda__header">Day Calendar</h1>
+        <h1 className="agenda__header">{this.props.calendarTitle}</h1>
         {this.getErrorMessages()}
         <div className="agenda__calendar">
           <DayCalendar
-            from={9}
-            to={21}
+            from={0}
+            to={24}
             events={this.props.events}
           />
         </div>
@@ -32,6 +32,7 @@ Agenda.propTypes = {
   dispatch: React.PropTypes.func.isRequired,
   events: React.PropTypes.array,
   error: React.PropTypes.string,
+  calendarTitle: React.PropTypes.string
 };
 
 const mapDispatchToProps = (dispatch) => {
